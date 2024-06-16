@@ -73,7 +73,9 @@ const Home = () => {
                     setAccCom(response.data.list[3].webContent[0])
                     setTitleH(response.data.list[5].webContent[0])
                     setTitleGallery(response.data.list[6].webContent[0])
-                    setLoadSucc(true);
+                   
+                    setTimeout(function() {setLoadSucc(true);}, 1000);
+                  
                     //console.log(response.data)
                 }
                 
