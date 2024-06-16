@@ -8,7 +8,7 @@ const DataContext = createContext({});
 export const DataProvider = ({children}) => { 
 
     const [datas, setDatas] = useState([]);
-    let urlServer = "http://localhost:7070/";
+    let urlServer = "https://port7070-5grg9.ondigitalocean.app/";
 
     const theme = createTheme({
         root: {
