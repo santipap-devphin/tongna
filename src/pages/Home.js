@@ -138,12 +138,20 @@ const Home = () => {
     return (<ThemeProvider theme={theme}>
                <MetaTag title="โรงแรมที่พักในเชียงใหม่ Tongna Cottage Natural Resort"  />
                <HeaderTop stylePaper={changeImg.val} setUpdateImg={setUpdateImg} setSwitchImg={setSwitchImg} data={homeCarousel}/>
-               <SectionWelcome content={welComeHotel} loads={loadSucc} />
-               <SectionRoom titletxt={accCom} loads={loadSucc} rooms={listRoom} />
-               <SectionExper titleH = {titleH} loads={loadList} hLight={listHLight} />
-               <SectionAccom />
-               <SectionGallery titletxt={titleGallery} loads={loadSucc} />
-               <SectionBook />
+               {
+                loadSucc ? 
+                <>
+                <SectionWelcome content={welComeHotel} loads={loadSucc} />
+                <SectionRoom titletxt={accCom} loads={loadSucc} rooms={listRoom} />
+                <SectionExper titleH = {titleH} loads={loadList} hLight={listHLight} />
+                <SectionAccom />
+                <SectionGallery titletxt={titleGallery} loads={loadSucc} />
+                <SectionBook />
+                </>
+               :null
+
+               }
+               
                <Footer />
             </ThemeProvider>)
 
