@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "http://localhost:7070";
+const BASE_URL = "https://port7070-5grg9.ondigitalocean.app";
 
 export default axios.create({
     baseURL: BASE_URL
